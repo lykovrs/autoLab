@@ -1,0 +1,24 @@
+<section>
+  <h1>
+    {{title}}
+  </h1>
+
+  <section class="element">
+    <div class="element-left">
+      <app-main [menu]="menuItems"></app-main>
+    </div>
+
+    <div class="element-right">
+      <app-temperatur></app-temperatur>
+      <app-teddy-bear></app-teddy-bear>
+    </div>
+    <div class="clear"></div>
+
+  </section>
+
+    <app-copyright [link]="copyrightLink" [textLink]="copyrightTextLink">
+      © 2015 Hot Weather Widget. All rights reserved | Design by
+  </app-copyright>
+</section>
+
+
