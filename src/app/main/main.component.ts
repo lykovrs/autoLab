@@ -1,53 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 interface IItem {
-  addr:string;
-  text:[string];
-  tel:string;
-  activityImg:[string];
+  name:string;
+  status:string;
+  description:[string];
+  address: {
+    tell: number;
+  }
+  activityImgs:[string];
+  mainImg:[string];
+
+
 }
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css'],
-  inputs: ['menu:menu']
+  styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
   public items:[IItem];
   public mainImg:string;
   public title:string;
+  public log = (x) => {
+    console.log(x)
+  };
 
+  @Input() menu;
 
   constructor() {
+
 
     this.title = 'Righteous indignation & like';
     this.mainImg = 'images/1.jpg';
 
     this.items = [
-      {
-        addr: 'Resort Address',
-        text: [
-            'Sed ut perspiciatis',
-            'Et harum quidem'
-        ],
-        activityImg: [
-        'images/res.jpg',
-        'images/r1.jpg'
-        ],
-        tel: '1285 968 685'
-      },
-      {
-        addr: 'Resort Address 2',
-        text: [
-          'Sed ut perspiciatis',
-          'Et harum quidem'
-        ],
-        activityImg: [
-          'images/res.jpg',
-          'images/r1.jpg'
-        ],
-        tel: '1285 968 685'
-      }
+
     ];
   }
 

@@ -9,13 +9,13 @@ export class TeddyBearComponent implements OnInit {
   public title:string;
   public followers:number;
   public following:number;
-  public src:string;
+  public imgSrc:string;
 
   constructor() {
     this.title = "Nam libero voluptatem";
     this.followers = 2850;
     this.following = 675;
-    this.src = 'images/b1.jpg';
+    this.imgSrc = 'images/b1.jpg';
   }
 
   ngOnInit() {

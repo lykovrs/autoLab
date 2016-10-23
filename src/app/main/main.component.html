@@ -1,7 +1,7 @@
 <div>
   <div class="element-bg-img"><img [src]="mainImg" alt="" class="img-responsive"> </div>
   <div class="element-left-bottom">
-    <app-menu [items]="menu"></app-menu>
+    <app-menu [items]="menu" (itemEventClick)="log($event)"></app-menu>
     <div class="village">
       <h3>{{title}}</h3>
       <span class="line"> </span>
