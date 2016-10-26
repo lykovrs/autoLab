@@ -1,16 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
-interface IItem {
-  name:string;
-  status:string;
-  description:[string];
-  address: {
-    tell: number;
-  }
-  activityImgs:[string];
-  mainImg:[string];
-
-
-}
+// interface IItem {
+//   name:string;
+//   status:string;
+//   description:[string];
+//   address: {
+//     tell: number;
+//   }
+//   activityImgs:[string];
+//   mainImg:[string];
+//
+//
+// }
 
 @Component({
   selector: 'app-main',
@@ -18,24 +18,16 @@ interface IItem {
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  public items:[IItem];
-  public mainImg:string;
   public title:string;
   public log = (x) => {
     console.log(x)
   };
 
   @Input() menu;
+  @Input() active;
 
   constructor() {
-
-
-    this.title = 'Righteous indignation & like';
-    this.mainImg = 'images/1.jpg';
-
-    this.items = [
-
-    ];
+    this.title = 'Сities'
   }
 
   ngOnInit() {

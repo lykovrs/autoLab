@@ -1,28 +1,32 @@
 <div>
-  <div class="element-bg-img"><img [src]="mainImg" alt="" class="img-responsive"> </div>
-  <div class="element-left-bottom">
-    <app-menu [items]="menu" (itemEventClick)="log($event)"></app-menu>
-    <div class="village">
-      <h3>{{title}}</h3>
-      <span class="line"> </span>
-      <div class="activity_box">
-        <div class="scrollbar" id="style-2">
-          <div class="activity-row" *ngFor="let item of items">
-            <div class="activity-desc">
-              <h5>{{item.addr}}</h5>
-              <p *ngFor="let p of item.text">{{p}}</p>
+    <div class="element-bg-img"><img [src]="'http://www.destination360.com/north-america/us/california/san-francisco/images/s/beaches.jpg'" alt="" class="img-responsive"></div>
+    <div class="element-left-bottom">
 
-              <h6>Tel:+{{item.tel}}</h6>
+        <app-menu [items]="menu" (itemEventClick)="log($event)"></app-menu>
+
+        <div class="village">
+            <h3>{{title}}</h3>
+            <span class="line"> </span>
+            <div class="activity_box">
+                <div class="scrollbar" id="style-2">
+
+                    <div class="activity-row" *ngFor="let item of menu">
+                        <div class="activity-desc">
+                            <h5>{{item.display_location.city}}</h5>
+                            <!--<p>City: {{item.display_location.}}</p>-->
+                            <p>{{item.observation_time}}</p>
+
+                            <!--<h6>Tel:+{{item.tel}}</h6>-->
+                        </div>
+                        <div class="activity-img">
+                            <ul>
+                                <li *ngFor="let imgSrc of item.activityImg"><img [src]="imgSrc" alt=""></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
             </div>
-            <div class="activity-img">
-              <ul>
-                <li *ngFor="let imgSrc of item.activityImg"><img [src]="imgSrc" alt=""></li>
-              </ul>
-            </div>
-            <div class="clear"> </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>

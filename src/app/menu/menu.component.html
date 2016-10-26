@@ -3,7 +3,7 @@
     <li *ngFor="let item of items"
         (click)="itemMenuClick(item)"
         class="{{item.mod}}">
-      <a [href]="item.link">{{item.text}}</a>
+      <a [href]="item.link">{{item.display_location.city}}</a>
     </li>
   </ul>
 </div>
