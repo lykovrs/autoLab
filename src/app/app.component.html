@@ -1,34 +1,23 @@
 <section>
 
-  <h1>{{title}}</h1>
-  <p><i>{{fetches}}</i></p>
-  <button (click)="getWeather('San_Francisco')">San_Francisco</button>
-  <!--<input #term (keyup)="search(term.value)"/>-->
-  <ul>
-    <li *ngFor="let item of items | async">dfdf</li>
-  </ul>
+  <h1>
+    {{title}}
+  </h1>
 
-  <!--{{items | async}}-->
+  <section class="element">
+    <div class="element-left">
+      <app-informer [cities]="cities"
+                    [selected]="active"
+                    (itemClick)="changeActive($event)"></app-informer>
+    </div>
 
-
-  <!--<h1>-->
-    <!--{{title}}-->
-  <!--</h1>-->
-
-  <!--<p>{{data}}</p>-->
-
-  <!--<section class="element">-->
-    <!--<div class="element-left">-->
-      <!--<app-main [menu]="items" [active]="items[0]"></app-main>-->
-    <!--</div>-->
-
-    <!--<div class="element-right">-->
+    <div class="element-right">
       <!--<app-temperatur></app-temperatur>-->
       <!--<app-teddy-bear></app-teddy-bear>-->
-    <!--</div>-->
-    <!--<div class="clear"></div>-->
+    </div>
+    <div class="clear"></div>
 
-  <!--</section>-->
+  </section>
 
     <!--<app-copyright [link]="copyrightLink" [textLink]="copyrightTextLink">-->
       <!--© 2015 Hot Weather Widget. All rights reserved | Design by-->

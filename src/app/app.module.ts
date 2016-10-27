@@ -9,9 +9,10 @@ import 'rxjs/add/operator/map';
 import { AppComponent } from './app.component';
 import { TemperaturComponent } from './temperatur/temperatur.component';
 import { TeddyBearComponent } from './teddy-bear/teddy-bear.component';
-import { MainComponent } from './main/main.component';
+import { InformerComponent } from './informer/informer.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { MenuComponent } from './menu/menu.component';
+import {WeatherService} from './weather.service';
 
 
 
@@ -20,7 +21,7 @@ import { MenuComponent } from './menu/menu.component';
     AppComponent,
     TemperaturComponent,
     TeddyBearComponent,
-    MainComponent,
+    InformerComponent,
     CopyrightComponent,
     MenuComponent
   ],
@@ -30,6 +31,7 @@ import { MenuComponent } from './menu/menu.component';
     HttpModule,
     JsonpModule
   ],
+  providers: [WeatherService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
