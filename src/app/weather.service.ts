@@ -38,5 +38,4 @@ export class WeatherService {
         console.error('There was an error: ' + err);
     }
 
-
 }
