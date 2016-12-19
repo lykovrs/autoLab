@@ -1,0 +1,7 @@
+<div class="ele-strip">
+    <ul>
+        <li *ngFor="let item of items" (click)="itemMenuClick(item)" class="{{item.mod}}">
+            <a>{{item.name}}</a>
+        </li>
+    </ul>
+</div>

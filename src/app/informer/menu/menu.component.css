@@ -3,15 +3,18 @@
     padding: 1em 1em;
     margin: -3px 0px 0px 0px;
 }
-.ele-strip ul{
+
+.ele-strip ul {
     text-align: center;
 }
+
 .ele-strip ul li {
     display: inline-block;
     padding: 0em 0.5em;
     border-right: 1px solid #fff;
 }
-.ele-strip ul li a{
-    font-size:1em;
+
+.ele-strip ul li a {
+    font-size: 1em;
     color: #fff;
 }
